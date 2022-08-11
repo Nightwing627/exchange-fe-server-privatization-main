@@ -1,0 +1,11 @@
+FROM harbor.chaindown.com/saas-test/node:13.3.0-stretch
+#FROM node:13.3.0-stretch
+
+WORKDIR /usr/local/chainup/exchange-fe-server-otc
+
+ADD ./ /usr/local/chainup/exchange-fe-server-otc
+
+EXPOSE 7002
+
+ENTRYPOINT npm run startTestOtc && tail -f /root/logs/master-stdout.log
+

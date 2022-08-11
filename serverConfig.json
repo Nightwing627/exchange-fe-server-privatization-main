@@ -1,0 +1,5 @@
+{
+  "curlHost": "http://exchange-web-api:8208",
+  "proxy": "",
+  "headerHost": ""
+}

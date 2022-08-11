@@ -1,0 +1,11 @@
+FROM harbor.chaindown.com/saas-test/node:13.3.0-stretch
+#FROM node:13.3.0-stretch
+
+WORKDIR /usr/local/chainup/exchange-fe-server-ex
+
+ADD ./ /usr/local/chainup/exchange-fe-server-ex
+
+EXPOSE 7001
+
+ENTRYPOINT npm run startTestEx && tail -f /root/logs/master-stdout.log
+
